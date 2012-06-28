@@ -30,6 +30,7 @@ $(XPMLIB):	$(OBJ)
 		$(RANLIB) $@
 
 install:	$(XPMLIB)
+		mkdir -p "$(LIBDIR)"
 		$(INSTALL) $(XPMLIB) "$(LIBDIR)"
 		mkdir -p "$(X11INCDIR)"
 		$(INSTALL) xpm.h "$(X11INCDIR)"
